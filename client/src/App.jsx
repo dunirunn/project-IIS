@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
 
 function App() {
   
@@ -15,7 +14,7 @@ function App() {
     return body;
   };
   
-  // получение GET маршрута с сервера Express, который соответствует GET из server.js 
+  // тест гет запрос
   useEffect(() => {
     callBackendAPI()
     .then(res => setState(res.express))
@@ -23,11 +22,10 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-
-      {/* вывод данных, полученных с сервера Express */}
+    <div>
+      <h1>yapidor</h1>
       <div>
-          {state}
+          <p>{state}</p>
       </div>
     </div>
   );
