@@ -11,7 +11,9 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "express": "^5.2.1"
+    "@ljharb/tsconfig": "^0.3.2",
+    "express": "^5.2.1",
+    "tsconfig": "^7.0.0"
   },
   "repository": {
     "type": "git",

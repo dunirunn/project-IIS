@@ -1,10 +1,10 @@
 import React from "react";
 
-const Register = () => {
+const Profile = () => {
   return (
     <>
     </>
   );
 };
 
-export default Register; 
+export default Profile;

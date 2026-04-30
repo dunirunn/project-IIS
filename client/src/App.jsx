@@ -1,34 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import * as ROUTES from "./constants/routes";
+import Home from "./pages/Home/Home";
+import Content from "./pages/Content/Content";
+import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
+import Profile from "./pages/Profile/Profile";
+import Header from "./components/Header";
 
-function App() {
-  
-  const [state, setState] = useState(null);
-
-  const callBackendAPI = async () => {
-    const response = await fetch('/express_backend');
-    const body = await response.json();
-
-    if (response.status !== 200) {
-      throw Error(body.message)
-    }
-    return body;
-  };
-  
-  // тест гет запрос
-  useEffect(() => {
-    callBackendAPI()
-    .then(res => setState(res.express))
-    .catch(err => console.log(err));
-  }, [])
-
+const App = () => {
   return (
-    <div>
-      <h1>yapidor</h1>
-      <div>
-          <p>{state}</p>
-      </div>
-    </div>
+    <>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path={ROUTES.HOME} element={<Home />} />
+        <Route path={ROUTES.CONTENT} element={<Content />} />
+        <Route path={ROUTES.LOGIN} element={<Login />} />
+        <Route path={ROUTES.REGISTER} element={<Register />} />
+        <Route path={ROUTES.PROFILE} element={<Profile />} />
+      </Routes>
+    </Router>
+    </>
   );
-}
+};
 
 export default App;
