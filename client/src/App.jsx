@@ -6,6 +6,7 @@ import Content from "./pages/Content/Content";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Profile from "./pages/Profile/Profile";
+import Search from "./pages/Search/Search";
 import Header from "./components/Header";
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
         <Route path={ROUTES.LOGIN} element={<Login />} />
         <Route path={ROUTES.REGISTER} element={<Register />} />
         <Route path={ROUTES.PROFILE} element={<Profile />} />
+        <Route path={ROUTES.SEARCH} element={<Search />} />
       </Routes>
     </Router>
     </>
