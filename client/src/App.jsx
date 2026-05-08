@@ -8,6 +8,7 @@ import Register from "./pages/Register/Register";
 import Profile from "./pages/Profile/Profile";
 import Search from "./pages/Search/Search";
 import Header from "./components/Header";
+import "./App.css";
 
 const App = () => {
   return (
