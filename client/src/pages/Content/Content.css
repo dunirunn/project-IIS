@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Oswald:wght@400;600;700&family=Special+Elite&display=swap");
+
+/* ── Page wrapper ────────────────────────────────────────── */
+.content-page {
+  min-height: 100vh;
+  background-color: #fdf6e3;
+  background-image: radial-gradient(circle, rgba(199,67,0,0.18) 2px, transparent 2px);
+  background-size: 22px 22px;
+  font-family: "Bangers", sans-serif;
+  padding-bottom: 60px;
+}
+
+/* ── Loading / error ─────────────────────────────────────── */
+.content-loading,
+.content-error,
+.content-missing {
+  font-family: "Bangers", sans-serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 80px 24px;
+}
+.content-loading {
+  color: #c74300;
+  text-shadow:
+    -1px -1px 0 #111,
+     1px -1px 0 #111,
+    -1px  1px 0 #111,
+     1px  1px 0 #111;
+}
+.content-loading::after {
+  content: "...";
+  animation: ldots 1.2s steps(3, end) infinite;
+}
+@keyframes ldots {
+  0%  { content: ".";   }
+  33% { content: "..";  }
+  66% { content: "..."; }
+}
+.content-error   { color: #c74300; }
+.content-missing { color: #111; opacity: 0.4; }
+
+/* ══════════════════════════════════════════════════════════
+   HERO STRIP — title + cover side by side
+══════════════════════════════════════════════════════════ */
+.content-hero {
+  background: #c74300;
+  background-image: radial-gradient(circle, rgba(0,0,0,0.18) 1.5px, transparent 1.5px);
+  background-size: 10px 10px;
+  border-bottom: 3px solid #111;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.22);
+  padding: 28px 36px 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 28px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* faint diagonal speed lines */
+.content-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -55deg,
+    transparent,
+    transparent 28px,
+    rgba(255,255,255,0.03) 28px,
+    rgba(255,255,255,0.03) 30px
+  );
+  pointer-events: none;
+}
+
+.content-hero-text {
+  flex: 1;
+  padding-bottom: 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.content-publisher-badge {
+  display: inline-block;
+  background: #ffd98a;
+  color: #111;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 3px 12px 2px;
+  border: 2px solid #111;
+  box-shadow: 2px 2px 0 #111;
+  margin-bottom: 10px;
+}
+
+.content-title {
+  font-family: "Bangers", sans-serif;
+  font-size: clamp(32px, 5vw, 56px);
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0 0 14px;
+  text-shadow:
+    -2px -2px 0 #111,
+     2px -2px 0 #111,
+    -2px  2px 0 #111,
+     2px  2px 0 #111,
+     0    5px 0 rgba(0,0,0,0.4);
+}
+
+.content-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.content-author-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0,0,0,0.35);
+  border: 1.5px solid rgba(255,255,255,0.3);
+  padding: 4px 12px 3px;
+  font-family: "Oswald", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #ffd98a;
+}
+.content-author-chip span {
+  color: rgba(255,255,255,0.6);
+  font-weight: 400;
+}
+
+/* cover floats up out of the strip */
+.content-cover-wrap {
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  margin-bottom: -4px;      /* overlap the border */
+}
+.content-cover {
+  width: 180px;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  border: 3px solid #111;
+  box-shadow:
+    5px 0   0 #111,
+    5px 5px 0 #111,
+    8px 8px 0 rgba(0,0,0,0.3);
+}
+
+/* wavy bottom */
+.content-wave {
+  display: block;
+  width: 100%;
+  line-height: 0;
+  margin-top: -1px;
+}
+
+/* ══════════════════════════════════════════════════════════
+   DESCRIPTION SECTION
+══════════════════════════════════════════════════════════ */
+.content-body {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 32px 28px 0;
+}
+
+.content-desc-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.content-desc-badge {
+  display: inline-block;
+  background: #111;
+  color: #ffd98a;
+  font-family: "Bangers", sans-serif;
+  font-size: 17px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 5px 16px 4px;
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+  flex-shrink: 0;
+}
+.content-desc-rule {
+  flex: 1;
+  height: 2.5px;
+  background: repeating-linear-gradient(
+    to right,
+    #111 0, #111 8px,
+    transparent 8px, transparent 14px
+  );
+}
+
+/* speech-bubble description box */
+.content-desc-bubble {
+  position: relative;
+  background: #fff;
+  border: 2.5px solid #111;
+  box-shadow: 4px 4px 0 #111;
+  padding: 20px 24px 22px;
+  font-family: "Special Elite", serif;
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #1a1a1a;
+}
+/* little corner dog-ear */
+.content-desc-bubble::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(225deg, #fdf6e3 50%, #fff 50%);
+  border-left: 2.5px solid #111;
+  border-bottom: 2.5px solid #111;
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .content-hero {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 18px 0;
+    gap: 16px;
+  }
+  .content-hero-text { padding-bottom: 0; }
+  .content-cover-wrap { align-self: center; }
+  .content-cover { width: 150px; height: 200px; }
+  .content-body { padding: 24px 14px 0; }
+  .content-desc-bubble { font-size: 14px; padding: 16px 16px 18px; }
+}
