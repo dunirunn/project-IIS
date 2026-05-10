@@ -148,7 +148,10 @@
   box-shadow:
     4px 4px 0 var(--ink),
     6px 6px 0 rgba(0,0,0,0.3);
-  display: block;
+  position: absolute;
+  scale: 1.4;
+  top: -50px;
+  left: -150px; 
 }
 
 /* ── Wavy bottom edge of hero ────────────────────────────── */

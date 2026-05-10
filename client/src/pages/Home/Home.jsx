@@ -4,13 +4,13 @@ import "./Home.css";
 
 /* ── Static "Timeless Best-Sellers" — comics 1–8 ─────────── */
 const STATIC_COMICS = [
-  { id: 1, title: "Amazing Fantasy #15",      publisher: "Marvel Comics"     },
-  { id: 2, title: "New Teen Titans #1-40",    publisher: "Detective Comics"  },
-  { id: 3, title: "Fantastic Four #232-293",  publisher: "Marvel Comics"     },
-  { id: 4, title: "Superman Annual",          publisher: "Detective Comics"  },
-  { id: 5, title: "X-Men #9 (1st Series)",   publisher: "Marvel Comics"     },
-  { id: 6, title: "Flash (V2) #80",           publisher: "Detective Comics"  },
-  { id: 7, title: "Daredevil #64 #165",       publisher: "Marvel Comics"     },
+  { id: 1, title: "Batman (1940-2011) #9",          publisher: "Detective Comics"  },
+  { id: 2, title: "Amazing Fantasy #15",      publisher: "Marvel Comics"     },
+  { id: 3, title: "New Teen Titans #1-40",    publisher: "Detective Comics"  },
+  { id: 4, title: "Fantastic Four #232-293",  publisher: "Marvel Comics"     },
+  { id: 5, title: "Superman Annual",          publisher: "Detective Comics"  },
+  { id: 6, title: "X-Men #9 (1st Series)",   publisher: "Marvel Comics"     },
+  { id: 7, title: "Flash (V2) #80",           publisher: "Detective Comics"  },
   { id: 8, title: "Supergirl Mini-Series #1", publisher: "Detective Comics"  },
 ];
 
